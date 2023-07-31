@@ -5,16 +5,15 @@ import { getCollection } from "astro:content";
 
 export async function getStaticPaths({ paginate }) {
   const posts = await getCollection("blog");
-  posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
   return paginate(posts, { pageSize: 10 });
 }
 
 const { page } = Astro.props;
 ---
 
-<BaseLayout title="Blog" sideBarActiveItemID="blog">
+<BaseLayout title="Cultura" sideBarActiveItemID="cultura">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Blog</div>
+    <div class="text-3xl w-full font-bold">Cultura Rotaractiana</div>
   </div>
 
   {
@@ -25,13 +24,13 @@ const { page } = Astro.props;
       </div>
     ) : (
       <ul>
-        {page.data.map((post) => (
+        {page.data.map((post: any) => (
           <>
             <HorizontalCard
               title={post.data.title}
               img={post.data.heroImage}
               desc={post.data.description}
-              url={"/blog/" + post.slug}
+              url={"/cultura/" + post.slug}
               target="_self"
               badge={post.data.badge}
             />

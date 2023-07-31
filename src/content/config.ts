@@ -3,7 +3,7 @@ import { z, defineCollection } from "astro:content";
 const blogSchema = z.object({
     title: z.string(),
     description: z.string(),
-    pubDate: z.coerce.date(),
+    pubDate: z.string().optional(),
     updatedDate: z.string().optional(),
     heroImage: z.string().optional(),
     badge: z.string().optional(),
@@ -16,7 +16,7 @@ const storeSchema = z.object({
     custom_link: z.string().optional(),
     updatedDate: z.coerce.date(),
     pricing: z.string().optional(),
-    oldPricing:  z.string().optional(),
+    oldPricing: z.string().optional(),
     badge: z.string().optional(),
     checkoutUrl: z.string().optional(),
     heroImage: z.string().optional(),
