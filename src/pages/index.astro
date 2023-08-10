@@ -3,14 +3,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 
-const posts = (await getCollection("blog")).sort(
+const posts = (await getCollection("blog"))
+  .sort
   // (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+  ();
 
 const last_posts = posts.slice(0, 3);
 ---
 
-<BaseLayout sideBarActiveItemID="home">
+<BaseLayout sideBarActiveItemID="home" title="Inicio">
   <div class="pb-12 mt-5">
     <div class="text-xl py-1">Hey there 👋</div>
     <div class="text-5xl font-bold">Somos la confe</div>
@@ -27,15 +28,8 @@ const last_posts = posts.slice(0, 3);
       </text>
     </div>
     <div class="mt-8">
-      <a class="btn" href="/agenda" target="_blank">
-        Conoce la agenda</a
-      >
-      <a
-        target="_blank"
-        class="btn btn-outline ml-5"
-      >
-        Inscribete
-      </a>
+      <a class="btn" href="/agenda" target="_blank"> Conoce la agenda</a>
+      <a target="_blank" class="btn btn-outline ml-5"> Inscribete</a>
     </div>
   </div>
 
@@ -67,7 +61,9 @@ const last_posts = posts.slice(0, 3);
   />
 
   <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">Un poco sobre nuestra cultura</div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10">
+      Un poco sobre nuestra cultura
+    </div>
   </div>
 
   {
