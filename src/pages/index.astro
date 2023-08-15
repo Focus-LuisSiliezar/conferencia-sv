@@ -5,7 +5,22 @@ import { Image } from "@astrojs/image/components";
 
 <BaseLayout sideBarActiveItemID="home" title="Inicio">
   <div class="mr-12">
-    <div class="text-xl py-2 text-royal-charcoal body">Hey there 👋</div>
+    <div class="image-spacing">
+      <Image
+        format="svg"
+        width={400}
+        height={100}
+        fit="contain"
+        src="/confe-logo.svg"
+        alt="Profile image"
+      />
+    </div>
+    <div
+      class="text-xl py-2 text-royal-charcoal body"
+      style="margin-top: -100px;"
+    >
+      Hey there 👋
+    </div>
     <div class="text-3xl font-bold titles leading-10 text-cranberry pb-6">
       ¡Bienvenidos al website de La Confe!
     </div>
@@ -15,15 +30,15 @@ import { Image } from "@astrojs/image/components";
       <a target="_blank" class="btn btn-outline"> Inscribete</a>
     </div> -->
   </div>
-  <div class="text-justify mr-6">
-    <text class="text-lg body leading-10 text-justify">
+  <div class="text-justify lg:mr-6">
+    <text class="text-lg body leading-10 text-left lg:text-justify">
       Es un honor darles una cálida bienvenida a la página oficial del evento
       más esperado del año rotario:
       <span class="titles text-royal-blue"
         >La Conferencia Bidistrital Rotaract.</span
       >
       Del <span class="titles">2 al 5</span> de mayo de 2024,
-      <span class="titles text-cranberry">El Salvador</span> es dará la bienvenida
+      <span class="titles text-cranberry">El Salvador</span> les dará la bienvenida
       ustedes, rotaracts provenientes de todos los rincones de Centroamérica. Este
       evento va más allá de las fronteras nacionales, será el catalizador para formar
       una red de líderes comprometidos que trasciendan las barreras geográficas y
@@ -31,24 +46,13 @@ import { Image } from "@astrojs/image/components";
       detalles de registro y participar en las dinámicas sorpresa de nuestras redes
       sociales.
       <br />
-      <span class=""> Hasta pronto,</span>
+      <span class=""> Atentamente,</span>
       <br />
     </text>
     <div class="h-6"></div>
     <text class="signature text-cranberry text-4xl lg:text-5xl">
-      - El Comité Organizador de La Confe
+      - El COC 2024
     </text>
-    <div>
-      <Image
-        class="border-cranberry border-2"
-        format="svg"
-        width={500}
-        height={300}
-        fit="contain"
-        src="/confe-logo.svg"
-        alt="Profile image"
-      />
-    </div>
   </div>
   <style is:global>
     .titles {
@@ -60,5 +64,10 @@ import { Image } from "@astrojs/image/components";
     .signature {
       font-family: "Manly Signature Regular", sans-serif;
     }
+    .image-spacing {
+      margin-top: -135px;
+      margin-left: -90px;
+    }
   </style>
+  <style></style>
 </BaseLayout>

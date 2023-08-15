@@ -1,6 +1,6 @@
 {
-  "name": "astrofy",
-  "description": "Astrofy is a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS. Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed.",
+  "name": "conferencia",
+  "description": "Welcome to el website de la Confe 28! Aquí podrás encontrar toda la información del evento y realizar tu inscripción para ser parte del evento más chivo del año.",
   "type": "module",
   "version": "2.5.1",
   "private": true,
