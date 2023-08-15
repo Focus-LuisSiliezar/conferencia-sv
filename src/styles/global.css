@@ -1,3 +1,27 @@
 .time-line-container>div:last-child .education__time>.education__line {
     display: none;
 }
+
+@font-face {
+    font-family: 'Manly Signature Regular';
+    src: url('/fonts/Manly Signature Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lemon Regular';
+    src: url('/fonts/LEMONMILK-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url('/fonts/avenir.tff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

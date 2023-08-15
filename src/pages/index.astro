@@ -1,84 +1,69 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import HorizontalCard from "../components/HorizontalCard.astro";
-import { getCollection } from "astro:content";
-
-const posts = (await getCollection("blog"))
-  .sort
-  // (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-  ();
-
-const last_posts = posts.slice(0, 3);
+import { Image } from "@astrojs/image/components";
 ---
 
 <BaseLayout sideBarActiveItemID="home" title="Inicio">
-  <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hey there 👋</div>
-    <div class="text-5xl font-bold">Somos la confe</div>
-    <div class="text-3xl py-3 font-bold">Frase de la confe</div>
-    <div class="py-2">
-      <text class="text-lg">
-        This is <b>Confe</b> lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-        est laborum
-      </text>
+  <div class="">
+    <div>
+      <Image
+        class=""
+        format="png"
+        width={200}
+        height={200}
+        fit="cover"
+        src="/profile.png"
+        alt="Profile image"
+      />
     </div>
-    <div class="mt-8">
+    <div class="text-xl py-1 text-royal-charcoal body">Hey there 👋</div>
+    <div class="text-3xl font-bold titles leading-10 text-cranberry pb-6">
+      ¡Bienvenidos al website de La Confe!
+    </div>
+    <!-- <div class="text-3xl font-bold">Frase de la confe</div> -->
+    <!-- <div class="mt-8 pb-12">
       <a class="btn" href="/agenda" target="_blank"> Conoce la agenda</a>
-      <a target="_blank" class="btn btn-outline ml-5"> Inscribete</a>
-    </div>
+      <a target="_blank" class="btn btn-outline"> Inscribete</a>
+    </div> -->
   </div>
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">Nuestros utlomsdikjaos hdiay sduhk{"</>"}</div>
+  <div class="">
+    <text class="text-lg body leading-10">
+      Es un honor darles la más cálida bienvenida a la página oficial del evento
+      más anticipado del año rotario:
+      <span class="titles text-royal-blue"
+        >La Conferencia Bidistrital Rotaract.</span
+      >
+      Del <span class="titles">2 al 5</span> de mayo de 2024,
+      <span class="titles text-cranberry">El Salvador</span>
+      se convertirá en el epicentro de la inspiración, la innovación y el cambio.
+      Jóvenes comprometidos como ustedes, provenientes de todos los rincones de Centroamérica,
+      se unirán para vivir una experiencia que transformará nuestras sociedades y
+      dejará un impacto duradero. Este evento va más allá de las fronteras nacionales.
+      Será el catalizador para formar una red de líderes comprometidos que trasciendan
+      las barreras geográficas y colaboren en proyectos de alcance regional. Imaginen
+      el poder colosal que emana cuando las mentes jóvenes más brillantes se unen
+      para enfrentar los desafíos compartidos de nuestra región. Permanezcan conectados
+      para recibir actualizaciones, detalles de registro y participar en nuestras
+      vibrantes redes sociales.
+      <br />
+      Nos encontraremos en mayo de 2024 para este encuentro épico.
+      <br />Hasta pronto,
+      <br />
+    </text>
+    <div class="h-6"></div>
+    <text class="signature text-cranberry text-4xl lg:text-5xl">
+      - El Comité Organizador de La Confe
+    </text>
   </div>
-
-  <HorizontalCard
-    title="Demo Project 1"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="NEW"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-    badge="FOSS"
-  />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">
-      Un poco sobre nuestra cultura
-    </div>
-  </div>
-
-  {
-    last_posts.map((post) => (
-      <>
-        <HorizontalCard
-          title={post.data.title}
-          img={post.data.heroImage}
-          desc={post.data.description}
-          url={"/cultura/" + post.slug}
-          target="_self"
-          badge={post.data.badge}
-        />
-        <div class="divider my-0" />
-      </>
-    ))
-  }
+  <style is:global>
+    .titles {
+      font-family: "Lemon Regular", sans-serif;
+    }
+    .body {
+      font-family: "Avenir", sans-serif;
+    }
+    .signature {
+      font-family: "Manly Signature Regular", sans-serif;
+    }
+  </style>
 </BaseLayout>
