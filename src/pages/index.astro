@@ -4,18 +4,7 @@ import { Image } from "@astrojs/image/components";
 ---
 
 <BaseLayout sideBarActiveItemID="home" title="Inicio">
-  <div class="">
-    <!-- <div>
-      <Image
-        class="border-cranberry border-2"
-        format="svg"
-        width={500}
-        height={300}
-        fit="contain"
-        src="/confe-logo.svg"
-        alt="Profile image"
-      />
-    </div> -->
+  <div class="mr-12">
     <div class="text-xl py-2 text-royal-charcoal body">Hey there 👋</div>
     <div class="text-3xl font-bold titles leading-10 text-cranberry pb-6">
       ¡Bienvenidos al website de La Confe!
@@ -26,28 +15,40 @@ import { Image } from "@astrojs/image/components";
       <a target="_blank" class="btn btn-outline"> Inscribete</a>
     </div> -->
   </div>
-  <div class="text-justify">
+  <div class="text-justify mr-6">
     <text class="text-lg body leading-10 text-justify">
-      Es un honor darles la más cálida bienvenida a la página oficial del evento
-      más anticipado del año rotario:
+      Es un honor darles una cálida bienvenida a la página oficial del evento
+      más esperado del año rotario:
       <span class="titles text-royal-blue"
         >La Conferencia Bidistrital Rotaract.</span
       >
       Del <span class="titles">2 al 5</span> de mayo de 2024,
-      <span class="titles text-cranberry">El Salvador</span> les dará la bienvenida
-      a ustedes, jóvenes comprometidos, provenientes de todos los rincones de Centroamérica.
-      Este evento va más allá de las fronteras nacionales, será el catalizador para
-      formar una red de líderes comprometidos que trasciendan las barreras geográficas
-      y colaboren en proyectos de alcance regional. Stay tuned para recibir actualizaciones,
+      <span class="titles text-cranberry">El Salvador</span> es dará la bienvenida
+      ustedes, rotaracts provenientes de todos los rincones de Centroamérica. Este
+      evento va más allá de las fronteras nacionales, será el catalizador para formar
+      una red de líderes comprometidos que trasciendan las barreras geográficas y
+      colaboren en proyectos de alcance regional. Stay tuned para recibir actualizaciones,
       detalles de registro y participar en las dinámicas sorpresa de nuestras redes
       sociales.
-      <br />Hasta pronto,
+      <br />
+      <span class=""> Hasta pronto,</span>
       <br />
     </text>
     <div class="h-6"></div>
     <text class="signature text-cranberry text-4xl lg:text-5xl">
       - El Comité Organizador de La Confe
     </text>
+    <div>
+      <Image
+        class="border-cranberry border-2"
+        format="svg"
+        width={500}
+        height={300}
+        fit="contain"
+        src="/confe-logo.svg"
+        alt="Profile image"
+      />
+    </div>
   </div>
   <style is:global>
     .titles {
