@@ -25,3 +25,15 @@
     font-style: normal;
     font-display: swap;
 }
+
+.titles {
+    font-family: "Lemon Regular", sans-serif;
+}
+
+.body {
+    font-family: "Avenir", sans-serif;
+}
+
+.signature {
+    font-family: "Manly Signature Regular", sans-serif;
+}

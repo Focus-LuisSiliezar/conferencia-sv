@@ -5,27 +5,20 @@ import { Image } from "@astrojs/image/components";
 
 <BaseLayout sideBarActiveItemID="home" title="Inicio">
   <div class="mr-12">
-    <div class="image-spacing">
+    <div>
       <Image
         format="svg"
         width={400}
         height={100}
         fit="contain"
-        src="/confe-logo.svg"
+        src="/profile.svg"
         alt="Profile image"
       />
     </div>
     <div
-      class="text-3xl font-bold titles leading-10 text-cranberry pb-6"
-      style="margin-top: -100px;"
-    >
+      class="text-3xl font-bold titles leading-10 text-cranberry pb-6 mt-12">
       ¡Bienvenidos al website de La Confe!
     </div>
-    <!-- <div class="text-3xl font-bold">Frase de la confe</div> -->
-    <!-- <div class="mt-8 pb-12">
-      <a class="btn" href="/agenda" target="_blank"> Conoce la agenda</a>
-      <a target="_blank" class="btn btn-outline"> Inscribete</a>
-    </div> -->
   </div>
   <div class="text-justify lg:mr-6">
     <text class="text-lg body leading-10 text-left lg:text-justify">
@@ -51,20 +44,4 @@ import { Image } from "@astrojs/image/components";
       - El COC 2024
     </text>
   </div>
-  <style is:global>
-    .titles {
-      font-family: "Lemon Regular", sans-serif;
-    }
-    .body {
-      font-family: "Avenir", sans-serif;
-    }
-    .signature {
-      font-family: "Manly Signature Regular", sans-serif;
-    }
-    .image-spacing {
-      margin-top: -135px;
-      margin-left: -90px;
-    }
-  </style>
-  <style></style>
 </BaseLayout>
