@@ -3,9 +3,6 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import SideBar from "../components/SideBar.astro";
-import { getLangFromUrl } from '../i18n/utils';
-
-const lang = getLangFromUrl(Astro.url);
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
@@ -13,7 +10,7 @@ const { image, title = SITE_TITLE, description = SITE_DESCRIPTION, includeSideba
 ---
 
 <!DOCTYPE html>
-<html  lang={lang} data-theme="lofi">
+<html lang="en" data-theme="lofi">
   <head>
     <BaseHead title={title} description={description} image={image} />
   </head>
