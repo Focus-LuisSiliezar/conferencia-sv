@@ -3,45 +3,43 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { Image } from "@astrojs/image/components";
 ---
 
-<BaseLayout sideBarActiveItemID="home" title="Inicio">
+<BaseLayout sideBarActiveItemID="home" title="Home">
   <div class="mr-12">
     <div>
       <Image
         format="svg"
-        width={400}
+        width={300}
         height={100}
         fit="contain"
         src="/profile.svg"
         alt="Profile image"
       />
     </div>
-    <div
-      class="text-3xl font-bold titles leading-10 text-cranberry pb-6 mt-12">
-      WEWW al website de La Confe!
+    <div class="text-3xl font-bold titles leading-10 text-cranberry pb-6 mt-12">
+      Welcome to "La Confe" Website!
     </div>
   </div>
   <div class="text-justify lg:mr-6">
     <text class="text-lg body leading-10 text-left lg:text-justify">
-      Es un honor darles una cálida bienvenida a la página oficial del evento
-      más esperado del año rotario:
+      It is an honor to warmly welcome you to the official website of the most
+      anticipated event of the Rotary year:
       <span class="titles text-royal-blue"
-        >La Conferencia Bidistrital Rotaract.</span
+        >The Bidistrict Rotaract Conference.</span
       >
-      Del <span class="titles">2 al 5</span> de mayo de 2024,
-      <span class="titles text-cranberry">El Salvador</span> les dará la bienvenida
-      a ustedes, rotaracts provenientes de todos los rincones de Centroamérica. Este
-      evento va más allá de las fronteras nacionales, será el catalizador para formar
-      una red de líderes comprometidos que trasciendan las barreras geográficas y
-      colaboren en proyectos de alcance regional. Stay tuned para recibir actualizaciones,
-      detalles de registro y participar en las dinámicas sorpresa de nuestras redes
-      sociales.
+      From <span class="titles">May 2-5,</span> 2024,
+      <span class="titles text-cranberry">El Salvador</span> will welcome you Rotaracts
+      from all corners of Central America. This event goes beyond national borders,
+      it will be the catalyst to form a network of committed leaders who transcend
+      geographical barriers and collaborate in projects of regional scope. Stay tuned
+      to receive updates, registration details and participate in the surprise dynamics
+      of our social networks.
       <br />
-      <span class=""> Atentamente,</span>
+      <span class=""> Sincerely,</span>
       <br />
     </text>
     <div class="h-6"></div>
     <text class="signature text-cranberry text-4xl lg:text-5xl">
-      - El COC 2024
+      -COC TEAM 2024
     </text>
   </div>
 </BaseLayout>
