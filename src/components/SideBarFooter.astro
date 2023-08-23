@@ -1,3 +1,14 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+import LanguagePicker from '../components/LanguagePicker.astro';
+
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+---
+
 <div
     class="block sticky pointer-events-none bottom-10 bg-base-200 justify-center h-12 [mask-image:linear-gradient(transparent,#000000)]"
 >
@@ -24,6 +35,8 @@
             ></path>
         </svg>
     </a>
+    <LanguagePicker />
+
     <!-- <a
         href=""
         target="_blank"

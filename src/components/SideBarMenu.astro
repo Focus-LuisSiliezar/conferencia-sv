@@ -1,5 +1,12 @@
 ---
 import { Image } from "@astrojs/image/components";
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 const { sideBarActiveItemID } = Astro.props;
 const activeClass = "bg-base-300"; // For primary color replace with `active` class
 ---
@@ -19,7 +26,7 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
     <a
       class="pb-3 text-base body"
       id="home "
-      href="/">Inicio 🏠</a>
+      href="/">{t("nav.home")} 🏠</a>
   </li>
   <li>
     <a
@@ -35,6 +42,7 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
   <li>
     <a class="py-3 text-base body" id="cultura" href="/cultura">Cultura 🧠</a>
   </li>
+
   <!-- <li>
     <a class="py-3 text-base body" id="services" href="">Sapeos 🐸</a>
   </li> -->
