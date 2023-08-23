@@ -3,10 +3,9 @@ import { Image } from "@astrojs/image/components";
 import { getLangFromUrl, useTranslations,useTranslatedPath } from '../i18n/utils';
 
 
-
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
+const translatePath = useTranslatedPath(lang);
 const { sideBarActiveItemID } = Astro.props;
 const activeClass = "bg-base-300"; // For primary color replace with `active` class
 ---
@@ -25,8 +24,8 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
   <li>
     <a
       class="pb-3 text-base body"
-      id="home "
-      href="/">{t("nav.home")} 🏠</a>
+      id="home"
+      href={translatePath('/')}>{t("nav.home")} 🏠</a>
   </li>
   <li>
     <a
@@ -35,12 +34,12 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
       href="https://pay.n1co.shop/pl/N8zdXtRPX">{t("nav.inscription")} 🗳️</a>
   </li>
   <li>
-    <a class="py-3 text-base body" id="essencials" href="/essencials"
+    <a class="py-3 text-base body" id="essencials"href={translatePath('/essencials/')}
       >{t("nav.essencials")} 🧭</a
     >
   </li>
   <li>
-    <a class="py-3 text-base body" id="cultura" href="/cultura">{t("nav.culture")} 🧠</a>
+    <a class="py-3 text-base body" id="cultura" href={translatePath('/culture/')}>{t("nav.culture")} 🧠</a>
   </li>
 
   <!-- <li>
