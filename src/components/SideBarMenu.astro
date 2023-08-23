@@ -1,7 +1,10 @@
 ---
 import { Image } from "@astrojs/image/components";
-import { getLangFromUrl, useTranslations,useTranslatedPath } from '../i18n/utils';
-
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -12,7 +15,7 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
 
 <ul class="menu grow shrink menu-md overflow-y-auto">
   <Image
-  class={"pb-10 pt-10 pl-8justify-center items-center "}
+    class={"pb-10 pt-10 pl-8justify-center items-center "}
     format="svg"
     width={175}
     height={175}
@@ -22,10 +25,9 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
   />
   <p class="text-base body mb-4" style="font-weight: bold;">{t("nav.soon")}</p>
   <li>
-    <a
-      class="pb-3 text-base body"
-      id="home"
-      href={translatePath('/')}>{t("nav.home")} 🏠</a>
+    <a class="pb-3 text-base body" id="home" href={translatePath("/")}
+      >{t("nav.home")} 🏠</a
+    >
   </li>
   <!-- <li>
     <a
@@ -34,19 +36,33 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
       href="https://pay.n1co.shop/pl/N8zdXtRPX">{t("nav.inscription")} 🗳️</a>
   </li> -->
   <li>
-    <a class="py-3 text-base body" id="essencials"href={translatePath('/essentials/')}
-      >{t("nav.essencials")} 🧭</a
+    <a
+      class="py-3 text-base body"
+      id="essencials"
+      href={translatePath("/essentials/")}>{t("nav.essencials")} 🧭</a
     >
   </li>
   <li>
-    <a class="py-3 text-base body" id="cultura" href={translatePath('/culture/')}>{t("nav.culture")} 🧠</a>
+    <a
+      class="py-3 text-base body"
+      id="cultura"
+      href={translatePath("/culture/")}>{t("nav.culture")} 🧠</a
+    >
+  </li>
+  <li>
+    <a
+      class="py-3 text-base text-bold body"
+      id="cultura"
+      href="https://instagram.com/laconfertc?igshid=Y2IzZGU1MTFhOQ=="
+      >@laconfert 🌎</a
+    >
   </li>
 
   <!-- <li>
     <a class="py-3 text-base body" id="services" href="">Sapeos 🐸</a>
   </li> -->
   <!-- <li><a class="py-3 text-base body" id="store" href="">Tienda 💲</a></li> -->
-    <!-- <li>
+  <!-- <li>
       <a class="py-3 text-base body" id="agenda" href="/agenda">Agenda 🕓</a>
     </li> -->
   <!-- <li><a class="py-3 text-base" id="agenda" href="/agenda">Cuartos 🔥</a></li> -->
@@ -67,6 +83,6 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
     activeClass: activeClass,
   }}
 >
-  const activeItemElem = document.getElementById(sideBarActiveItemID);
-  activeItemElem && activeItemElem.classList.add(activeClass);
+const activeItemElem = document.getElementById(sideBarActiveItemID);
+activeItemElem && activeItemElem.classList.add(activeClass);
 </script>

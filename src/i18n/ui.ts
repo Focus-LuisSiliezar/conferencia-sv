@@ -14,7 +14,7 @@ export const ui = {
     'nav.inscription': 'Inscription',
     'nav.essencials': 'Essentials',
     'nav.culture': 'Culture',
-    "english": "Ingles",
+    "english": "English",
     "spanish": "Español"
   },
   es: {
@@ -24,6 +24,6 @@ export const ui = {
     'nav.essencials': 'Esenciales',
     'nav.culture': 'Cultura',
     "english": "English",
-    "spanish": "Spanish"
+    "spanish": "Español"
   },
 } as const;
