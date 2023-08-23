@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Agenda" sideBarActiveItemID="agenda">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Agenda</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+  <div class="my-8">
+    <a class="btn btn-outline" href="" target="_blank"> Pre-Confe</a>
+    <a href="" target="_blank" class="btn ml-5"> Conferencia</a>
+  </div>
+  <div class="flex flex-wrap justify-start self-start gap-5">
+    <a href="" target="_brlank" class="btn btn-outline mr-5"> Jueves</a>
+    <a href="" target="_blank" class="btn btn-outline mr-5"> Viernes</a>
+    <a class="btn mr-5" href="" target="_blank"> Sábado</a>
+    <a class="btn btn-outline mr-5" href="" target="_blank"> Domingo</a>
+  </div>
+  <div class="divider my-12"></div>
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Sábado</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Charla xyz"
+      subtitle="8:00am - 9:00am"
+    />
+    <TimeLineElement
+      title="Actividad 123"
+      subtitle="9:00am - 11:00am"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Charlistas</div>  
+    <div class="text-xl w-full font-semibold">Poner un detalle del charlista</div>  
+  </div>
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Actividad</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Job Title at Project or Company Name"
+      subtitle="9:00am - 11:00am"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Job Title at Project or Company Name"
+      subtitle="9:00am - 11:00am"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Job Title at Project or Company Name"
+      subtitle="9:00am - 11:00am"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident.
+    </TimeLineElement>
+  </div>
+</BaseLayout>
