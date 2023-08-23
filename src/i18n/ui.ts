@@ -1,8 +1,8 @@
 export const showDefaultLang = false;
 
 export const languages = {
-  en: 'English',
-  es: 'Spanish',
+  en: 'english',
+  es: 'spanish',
 };
 
 export const defaultLang = 'es';
@@ -10,11 +10,20 @@ export const defaultLang = 'es';
 export const ui = {
   en: {
     'nav.home': 'Home',
-    'nav.about': 'About',
-    'nav.twitter': 'Twitter',
+    'nav.soon': 'Coming soon',
+    'nav.inscription': 'Inscription',
+    'nav.essencials': 'Essentials',
+    'nav.culture': 'Culture',
+    "english": "Ingles",
+    "spanish": "Español"
   },
   es: {
     'nav.home': 'Inicio',
-    'nav.about': 'À propos',
+    'nav.soon': 'Proximamente',
+    'nav.inscription': 'Inscripcion',
+    'nav.essencials': 'Esenciales',
+    'nav.culture': 'Cultura',
+    "english": "English",
+    "spanish": "Spanish"
   },
 } as const;

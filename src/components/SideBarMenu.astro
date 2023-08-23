@@ -6,7 +6,6 @@ import { getLangFromUrl, useTranslations,useTranslatedPath } from '../i18n/utils
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const translatePath = useTranslatedPath(lang);
 
 const { sideBarActiveItemID } = Astro.props;
 const activeClass = "bg-base-300"; // For primary color replace with `active` class
@@ -22,7 +21,7 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
     src="/confe.svg"
     alt="confeshort"
   />
-  <p class="text-base body mb-4" style="font-weight: bold;">Coming soon:</p>
+  <p class="text-base body mb-4" style="font-weight: bold;">{t("nav.soon")}</p>
   <li>
     <a
       class="pb-3 text-base body"
@@ -33,15 +32,15 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
     <a
       class="pb-3 text-base body"
       id="home "
-      href="https://pay.n1co.shop/pl/N8zdXtRPX">Inscripción 🗳️</a>
+      href="https://pay.n1co.shop/pl/N8zdXtRPX">{t("nav.inscription")} 🗳️</a>
   </li>
   <li>
     <a class="py-3 text-base body" id="essencials" href="/essencials"
-      >Esenciales 🧭</a
+      >{t("nav.essencials")} 🧭</a
     >
   </li>
   <li>
-    <a class="py-3 text-base body" id="cultura" href="/cultura">Cultura 🧠</a>
+    <a class="py-3 text-base body" id="cultura" href="/cultura">{t("nav.culture")} 🧠</a>
   </li>
 
   <!-- <li>
