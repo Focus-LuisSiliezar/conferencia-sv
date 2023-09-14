@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from "@astrojs/image/components";
+import Card from "../components/Card.astro";
+import { getApiData } from "../services/getApiData";
 ---
 
 <BaseLayout sideBarActiveItemID="home" title="Inicio">
@@ -15,8 +17,7 @@ import { Image } from "@astrojs/image/components";
         alt="Profile image"
       />
     </div>
-    <div
-      class="text-3xl font-bold titles leading-10 text-cranberry pb-6 mt-12">
+    <div class="text-3xl font-bold titles leading-10 text-cranberry pb-6 mt-12">
       ¡Bienvenidos al website de La Confe!
     </div>
   </div>

@@ -14,6 +14,7 @@ export const ui = {
     'nav.inscription': 'Inscription',
     'nav.essencials': 'Essentials',
     'nav.culture': 'Culture',
+    'esc.mandatory': 'Mandatory',
     "english": "English",
     "spanish": "Español"
   },
@@ -23,6 +24,7 @@ export const ui = {
     'nav.inscription': 'Inscripcion',
     'nav.essencials': 'Esenciales',
     'nav.culture': 'Cultura',
+    'esc.mandatory': 'Obligatorio',
     "english": "English",
     "spanish": "Español"
   },

@@ -1,11 +1,21 @@
 ---
-const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { Image } from "@astrojs/image/components";
+const {
+  title,
+  img,
+  desc,
+  url,
+  isMandatory,
+  tags,
+  target = "_blank",
+} = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+console.log("badge", isMandatory);
 ---
 
-<div
-  class="rounded-lg bg-base-100  transition ease-in-out hover:scale-[102%]"
->
+<div class="rounded-lg bg-base-100 transition ease-in-out hover:scale-[102%] lg:max-w-full">
   <a href={url} target={target}>
     <div class="hero-content flex-col md:flex-row">
       {
@@ -24,7 +34,13 @@ import { Image } from "@astrojs/image/components";
       <div class="grow w-full">
         <h1 class="text-xl font-bold body">
           {title}
-          {badge && <div class="badge badge-secondary bg-cranberry border-none mx-2">{badge}</div>}
+          {
+            isMandatory === false && (
+              <div class="badge badge-secondary bg-cranberry border-none mx-2">
+                {t("esc.mandatory")}
+              </div>
+            )
+          }
         </h1>
         <p class="py-1 text-1xl body">{desc}</p>
         <div class="card-actions justify-end">
