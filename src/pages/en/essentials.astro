@@ -1,60 +1,59 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HorizontalCard from "../../components/HorizontalCard.astro";
+import { getApiData } from "../../services/getApiData";
+import { Esenciales } from "../../interfaces";
+import AlternativeLayout from "../../layouts/AlternativeLayout.astro";
+const esencials = await getApiData("esencials");
 ---
 
-<BaseLayout title="Essentials" sideBarActiveItemID="essencials">
+<AlternativeLayout title="Esenciales" sideBarActiveItemID="essencials">
   <div>
-    <div class="text-3xl w-full font-bold mb-5 titles text-royal-blue">Esenciales</div>
-  </div>
-
-  <HorizontalCard
-    title="Documentos de viaje"
-    img="/bebidas2.svg"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    badge="Must"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Entretenimiento"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Snack"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Medicamentos"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Cargadores"
-    img="/Charger.svg"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  />
-
-  <div>
-    <div class="text-3xl w-full font-bold mb-5 mt-10">
-      Cosas que te daremos*
+    <div class="text-3xl w-full font-bold mb-5 titles text-royal-blue">
+      Essentials
     </div>
   </div>
+  {
+    esencials
+      .filter(
+        (filteredData: Esenciales) =>
+          !filteredData?.attributes?.isGivenByUS
+      )
+      .map((esencial: Esenciales) => (
+        <>
+          <HorizontalCard
+            title={esencial?.attributes?.tituloEN}
+            desc={esencial?.attributes?.descripcionEN}
+            img={esencial?.attributes?.foto.data?.attributes.url}
+            isMandatory={!!esencial?.attributes?.isGivenByUS}
+          />
+          <div class="divider my-0" />
+        </>
+      ))
+  }
+ 
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 mt-10 titles text-royal-blue">
+      Things we'll give you*
+    </div>
+  </div>
+  {
+    esencials
+      .filter(
+        (filteredData: Esenciales) =>
+          !!filteredData?.attributes?.isGivenByUS 
+      )
+      .map((esencial: Esenciales) => (
+        <>
+          <HorizontalCard
+            title={esencial?.attributes?.tituloEN}
+            desc={esencial?.attributes?.descripcionEN}
+            img={esencial?.attributes?.foto.data?.attributes.url}
+            isMandatory={!!esencial?.attributes?.isGivenByUS}
+          />
+          <div class="divider my-0" />
+        </>
+      ))
+  }
 
-  <HorizontalCard
-    title="Agua"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    badge="FOSS"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Comida"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  />
-</BaseLayout>
+</AlternativeLayout>
