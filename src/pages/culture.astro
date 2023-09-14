@@ -3,10 +3,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getApiData } from "../services/getApiData";
 import { Cultura } from "../interfaces";
+import AlternativeLayout from "../layouts/AlternativeLayout.astro";
 const culturas = await getApiData("cultures");
 ---
 
-<BaseLayout title="Cultura" sideBarActiveItemID="cultura">
+<AlternativeLayout title="Cultura" sideBarActiveItemID="cultura">
   <div>
     <div class="text-3xl w-full font-bold mb-5 titles text-royal-blue">
       Cultura Rotaractiana
@@ -26,4 +27,4 @@ const culturas = await getApiData("cultures");
       ))
     }
   </div>
-</BaseLayout>
+</AlternativeLayout>
