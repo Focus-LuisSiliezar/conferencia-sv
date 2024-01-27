@@ -1,0 +1,33 @@
+---
+import HorizontalCard from "../components/HorizontalCard.astro";
+import AlternativeLayout from "../layouts/AlternativeLayout.astro";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "../i18n/utils";
+import WeInclude from "../includes.json";
+// console.log(JSON.stringify(WeInclude, null, 4));
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+
+---
+
+<AlternativeLayout title="Includes" sideBarActiveItemID="includes">
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 titles text-royal-blue">
+      {t("nav.includes")}
+    </div>
+  </div>
+  {
+    WeInclude.map((esencial: any) => (
+      <>
+        <HorizontalCard title={esencial?.title} img={esencial?.img} />
+        <div class="divider my-0" />
+      </>
+    ))
+  }
+
+  <div></div>
+</AlternativeLayout>
