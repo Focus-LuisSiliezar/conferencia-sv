@@ -1,5 +1,5 @@
 [
-{
+    {
     "title":"Mixer y descorche",
     "title_eng":"Mixer & No corkage fee",
     "img":"https://revista-lagunas.s3.us-east-2.amazonaws.com/2023/03/728-5-bebidas-premium-para-un-momento-especial-179-big.jpg"
@@ -28,5 +28,10 @@
     "title":"Coffee break",
     "title_eng":"Coffee break",
     "img":"https://www.coffeebreakmexico.com.mx/assets/images/coffee-break-ejecutivo-676x507.jpg"
+},
+{
+    "title":"Kit de bienvenida",
+    "title_eng":"Welcome kit",
+    "img":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%2Fimages%3Fk%3Dsurprise&psig=AOvVaw3WpuaTEfYRkHkCY4Jq0lZE&ust=1710384884486000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCJiJtq2e8IQDFQAAAAAdAAAAABAJ"
 }
 ]
