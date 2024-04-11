@@ -1,0 +1,76 @@
+---
+import AlternativeLayout from "../../layouts/AlternativeLayout.astro";
+---
+
+<AlternativeLayout title="Emergency" sideBarActiveItemID="emergency">
+  <div>
+    <div class="text-3xl w-full font-bold mb-5 titles text-royal-blue">
+      Emergency contacts
+    </div>
+  </div>
+  <div>
+    <a href="tel:127" class="bg-white">
+      <img src="/isss.png" class="shadow-container" />
+    </a>
+    <div>
+      <a href="tel:2222-5155" class="bg-white">
+        <img src="/cruz-roja.png" class="shadow-container" />
+      </a>
+      <div>
+        <a href="tel:2284-5792" class="bg-white">
+          <img src="/cruz-verde.png" class="shadow-container" />
+        </a>
+        <div>
+          <a href="tel:913" class="bg-white">
+            <img src="/bomberos.png" class="shadow-container" />
+          </a>
+          <div>
+            <a href="tel:2133-0000" class="bg-white">
+              <img src="/comando-salvamento.png" class="shadow-container" />
+            </a>
+            <div>
+              <a href="tel:915" class="bg-white">
+                <img src="/anda.png" class="shadow-container" />
+              </a>
+            </div>
+            <div>
+              <div>
+                <a href="tel:2233-5600" class="bg-white">
+                  <img src="/delsur.png" class="shadow-container" />
+                </a>
+              </div>
+              <div>
+                <a href="tel:911" class="bg-white">
+                  <img src="/pnc.png" class="shadow-container" />
+                </a>
+              </div>
+              <div>
+                <a href="tel:132" class="bg-white">
+                  <img src="/sem.png" class="shadow-container" />
+                </a>
+              </div>
+              <div>
+                <a href="tel:2281-0888" class="bg-white">
+                  <img src="/proteccion-civil.png" class="shadow-container" />
+                </a>
+              </div>
+            </div>
+
+            <style>
+              .shadow-container {
+                -webkit-box-shadow: -1px 15px 20px -1px rgba(214, 214, 214, 0.79);
+                -moz-box-shadow: -1px 15px 20px -1px rgba(214, 214, 214, 0.79);
+                box-shadow: -1px 15px 20px -1px rgba(214, 214, 214, 0.79);
+                width: 400px;
+                height: 200px;
+                object-fit: contain;
+                background-color: white;
+                margin-bottom: 24px;
+              }
+            </style>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</AlternativeLayout>

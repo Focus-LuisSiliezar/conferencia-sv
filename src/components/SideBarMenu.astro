@@ -29,19 +29,26 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
     >
   </li>
   <li>
-    <a href="https://forms.gle/3fw6iVc3c3b1cpz46"  class="py-3 text-base body">Inscripción (ESP)🗳️</a>
+    <a href="https://forms.gle/3fw6iVc3c3b1cpz46" class="py-3 text-base body"
+      >Inscripción (ESP)🗳️</a
+    >
   </li>
   <li>
-    <a href="https://forms.gle/sMJfPZViGUHSdfkW6" class="py-3 text-base body">Registration (ENG)🗳️</a>
+    <a href="https://forms.gle/sMJfPZViGUHSdfkW6" class="py-3 text-base body"
+      >Registration (ENG)🗳️</a
+    >
   </li>
   <li>
-    <a class="py-3 text-base body" href={translatePath("/preconfe/")}>Pre-Confe 🏖️</a>
+    <a class="py-3 text-base body" href={translatePath("/preconfe/")}
+      >Pre-Confe 🏖️</a
+    >
   </li>
   <li>
     <a
       class="pb-3 text-base body"
       href="https://www.instagram.com/p/C4t7j-bAmCA/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
-      >{t("nav.current-promo")}<span class="text-cranberry text-bold">%</span></a
+      >{t("nav.current-promo")}<span class="text-cranberry text-bold">%</span
+      ></a
     >
   </li>
   <li>
@@ -59,12 +66,12 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
     >
   </li>
   <li>
-      <a
+    <a
       href="https://open.spotify.com/playlist/07luKc0gjIaZgl4IedAQQb?si=cvHze6-5RT203vXbA0cwzQ&pt_success=1&nd=1&dlsi=ae8a7a0c93444575"
-        class="pb-3 text-base body"
-        id="home "
-       >{t("nav.tunes")} 🎶</a>
-    </li>
+      class="pb-3 text-base body"
+      id="home ">{t("nav.tunes")} 🎶</a
+    >
+  </li>
   <!-- <li>
     <a
       class="py-3 text-base body"
@@ -86,12 +93,18 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
     >
   </li>
   <li>
-    <a class="py-3 text-base body" id="services">{t("nav.soon")} Sapeos 🐸</a>
+    <a
+      href={translatePath("/emergency/")}
+      class="py-3 text-base body"
+      id="emergency">{t("nav.emergency")} 🚑</a
+    >
   </li>
+  <!-- <li>
+    <a class="py-3 text-base body" id="services">{t("nav.soon")} Sapeos 🐸</a>
+  </li> -->
   <li>
     <a
       class="py-3 text-base text-bold body"
-      id="cultura"
       href="https://instagram.com/laconfertc?igshid=Y2IzZGU1MTFhOQ=="
       >@laconfertc 📲</a
     >
@@ -117,6 +130,6 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
     activeClass: activeClass,
   }}
 >
-const activeItemElem = document.getElementById(sideBarActiveItemID);
-activeItemElem && activeItemElem.classList.add(activeClass);
+  const activeItemElem = document.getElementById(sideBarActiveItemID);
+  activeItemElem && activeItemElem.classList.add(activeClass);
 </script>

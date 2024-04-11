@@ -11,6 +11,7 @@ export const ui = {
   en: {
     'nav.home': 'Home',
     'nav.soon': 'Coming soon',
+    'nav.emergency': 'Emergency contacts',
     'nav.inscription': 'Registration',
     'nav.essencials': 'Essentials',
     'nav.current-promo': 'Current Promo',
@@ -25,6 +26,7 @@ export const ui = {
   es: {
     'nav.home': 'Inicio',
     'nav.soon': 'Próximamente',
+    'nav.emergency': 'Contactos de emergencia',
     'nav.inscription': 'Inscripción',
     'nav.essencials': 'Esenciales',
     'nav.current-promo': 'Promo Actual',
