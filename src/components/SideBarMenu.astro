@@ -29,6 +29,13 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
     >
   </li>
   <li>
+    <a
+      class="py-3 text-base body"
+      id="agenda"
+      href={translatePath("/agenda/")}><b>Agenda</b> ⏱️</a
+    >
+  </li>
+  <li>
     <a href="https://forms.gle/3fw6iVc3c3b1cpz46" class="py-3 text-base body"
       >Inscripción (ESP)🗳️</a
     >
@@ -43,14 +50,14 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
       >Pre-Confe 🏖️</a
     >
   </li>
-  <li>
+  <!-- <li>
     <a
       class="pb-3 text-base body"
       href="https://www.instagram.com/p/C4t7j-bAmCA/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
       >{t("nav.current-promo")}<span class="text-cranberry text-bold">%</span
       ></a
     >
-  </li>
+  </li> -->
   <li>
     <a
       class="py-3 text-base body"
@@ -72,19 +79,6 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
       id="home ">{t("nav.tunes")} 🎶</a
     >
   </li>
-  <!-- <li>
-    <a
-      class="py-3 text-base body"
-      id="essencials"
-      href={translatePath("/essentials/")}>Integrantes de la confe 👫</a
-    >
-  </li>
-  <li>
-    <a class="py-3 text-base body" id="agenda" href="/agenda">Agenda 🕓</a>
-  </li>
-  <li>
-    <a class="py-3 text-base body" id="services">Tematicas de fiestas 🪩</a>
-  </li> -->
   <li>
     <a
       class="py-3 text-base body"
