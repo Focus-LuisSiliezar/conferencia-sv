@@ -268,56 +268,155 @@ import { Image } from "@astrojs/image/components";
       <div class="text-2xl w-full font-semibold">Sabado</div>
     </div>
     <div class="time-line-container grid gap-4 mb-10">
-      <TimeLineElement title="Desayuno" subtitle="6:00am - 8:30am" />
-      <TimeLineElement title="Conferencia 1" subtitle="8:30am - 9:30am" />
-      <TimeLineElement title="Break" subtitle="9:30am - 9:55am" />
-      <TimeLineElement title="Taller" subtitle="9:55am - 10:40am" />
-      <TimeLineElement title="Almuerzo" subtitle="10:40am - 12:10md" />
-      <TimeLineElement title="Tiempo Libre" subtitle="12:10md - 1:40pm" />
-      <TimeLineElement title="Conferencia 2" subtitle="1:40pm - 2:40pm" />
-      <TimeLineElement
-        title="Traslado a dinamicas"
-        subtitle="2:40pm - 3:10pm"
-      />
-      <TimeLineElement title="Dinamicas" subtitle="3:10pm - 5:10pm" />
-      <TimeLineElement title="Traslado al hotel" subtitle="5:10pm - 5:40pm" />
-      <TimeLineElement
-        title="Tiempo Libre + arreglarse"
-        subtitle="5:40pm - 7:40pm"
-      />
-      <TimeLineElement
-        title="Cena de Clausura + charlas clausura"
-        subtitle="7:40pm - 11:40pm"
-      />
-      <TimeLineElement title="Embajada" subtitle="11:40pm - 2:10am" />
-    </div>
-  </div>
-  <!-- Domingo -->
-  <div id="domingo">
-    <div class="my-5">
-      <div class="text-2xl w-full font-semibold">Domingo</div>
-    </div>
-    <div class="time-line-container grid gap-4 mb-10">
-      <TimeLineElement title="Desayuno" subtitle="6:00am - 9:00am">
+      <TimeLineElement title="Desayuno" subtitle="6:00am - 8:30am">
         <div class="block">
           <div class="text-base text-cranberry">
-            <b>Vestuario:</b> LIBRE
+            <b>Vestuario:</b> CAMISA DELEGACION/LIBRE
           </div>
           <div class="text-sm text-royal-blue">
             <b>Lugar:</b> RESTAURANTE EL MIRADOR
           </div>
         </div>
       </TimeLineElement>
-      <TimeLineElement title="Checkout " subtitle="9:00am - 12:00am">
+      <TimeLineElement
+        title="Conferencia 2: Anna Staut"
+        subtitle="8:30am - 9:50am"
+      >
         <div class="block">
           <div class="text-base text-cranberry">
-            <b>Vestuario:</b> LIBRE
+            <b>Vestuario:</b> CAMISA DELEGACION/LIBRE
           </div>
           <div class="text-sm text-royal-blue">
-            <b>Lugar:</b> LOBBY
+            <b>Lugar:</b> SALONES TAMARINDO/COBANOS
           </div>
+        </div>
+      </TimeLineElement>
+      <TimeLineElement title="Coffee Break" subtitle="9:50am - 10:15am">
+        <div class="text-base text-cranberry">
+          <b>Vestuario:</b> CAMISA DELEGACION/LIBRE
+        </div>
+      </TimeLineElement>
+      <TimeLineElement title="Taller" subtitle="10:15am - 11:15am">
+        <div class="block">
+          <div class="text-base text-cranberry">
+            <b>Vestuario:</b> CAMISA DELEGACION/LIBRE
+          </div>
+          <div class="text-sm text-royal-blue">
+            <b>Lugar:</b> SALONES TAMARINDO/COBANOS
+          </div>
+        </div>
+      </TimeLineElement>
+      <TimeLineElement title="Tiempo Libre" subtitle="11:15am - 12:35md">
+        <div class="text-base text-cranberry">
+          <b>Vestuario:</b> CAMISA DELEGACION/LIBRE
+        </div>
+      </TimeLineElement>
+      <TimeLineElement title="Almuerzo" subtitle="12:35md - 1:35pm">
+        <div class="block">
+          <div class="text-base text-cranberry">
+            <b>Vestuario:</b> CAMISA DELEGACION/LIBRE
+          </div>
+          <div class="text-sm text-royal-blue">
+            <b>Lugar:</b> RESTAURANTE EL MIRADOR
+          </div>
+        </div>
+      </TimeLineElement>
+      <TimeLineElement title="Tiempo Libre" subtitle="1:35pm - 2:35pm">
+        <div class="text-base text-cranberry">
+          <b>Vestuario:</b> CAMISA DELEGACION/LIBRE
+        </div>
+      </TimeLineElement>
+      <TimeLineElement
+        title="Indicaciones generales de dinamicas"
+        subtitle="2:35pm - 3:00pm"
+      >
+        <div class="block">
+          <div class="text-base text-cranberry">
+            <b>Vestuario:</b> DEPORTIVO
+          </div>
+          <div class="text-sm text-royal-blue">
+            <b>Lugar:</b> SALONES TAMARINDO/COBANOS
+          </div>
+        </div>
+      </TimeLineElement>
+      <TimeLineElement title="Traslado a dinamicas" subtitle="3:00 - 3:30pm">
+        <div class="text-base text-cranberry">
+          <b>Vestuario:</b> DEPORTIVO
+        </div>
+      </TimeLineElement>
+      <TimeLineElement title="Dinamicas" subtitle="3:30pm - 5:30pm">
+        <div class="block">
+          <div class="text-base text-cranberry">
+            <b>Vestuario:</b> DEPORTIVO
+          </div>
+          <div class="text-sm text-royal-blue">
+            <b>Lugar:</b> PARQUE CUSCATLÁN
+          </div>
+        </div>
+      </TimeLineElement>
+      <TimeLineElement title="Traslado al hotel" subtitle="5:30pm - 6:00pm">
+        <div class="text-base text-cranberry">
+          <b>Vestuario:</b> DEPORTIVO
+        </div>
+      </TimeLineElement>
+      <TimeLineElement title="Tiempo para cambiarse" subtitle="6:00pm - 8:00pm">
+        <div class="text-base text-cranberry">
+          <b>Vestuario:</b> PROM NIGHT
+        </div>
+      </TimeLineElement>
+      <TimeLineElement title="Cena de Clausura" subtitle="8:00pm - 11:30pm">
+        <div class="block">
+          <div class="text-base text-cranberry">
+            <b>Vestuario:</b> PROM NIGHT
+          </div>
+          <div class="text-sm text-royal-blue">
+            <b>Lugar:</b> SALONES TAMARINDO/COBANOS
+          </div>
+        </div>
+      </TimeLineElement>
+      <TimeLineElement
+        title="Tiempo para cambiarse"
+        subtitle="11:30pm - 12:00am"
+      >
+        <div class="text-base text-cranberry">
+          <b>Vestuario:</b> WET REPUBLIC
+        </div>
+      </TimeLineElement>
+      <TimeLineElement title="Embajada Costa Rica" subtitle="12:00am - 2:30am">
+        <div class="text-base text-cranberry">
+          <b>Vestuario:</b> WET REPUBLIC
+        </div>
+        <div class="text-sm text-royal-blue">
+          <b>Lugar:</b> SALONES TAMARINDO/COBANOS
         </div>
       </TimeLineElement>
     </div>
   </div>
-</BaseLayout>
+<!-- Domingo -->
+<div id="domingo">
+  <div class="my-5">
+    <div class="text-2xl w-full font-semibold">Domingo</div>
+  </div>
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement title="Desayuno" subtitle="6:00am - 9:00am">
+      <div class="block">
+        <div class="text-base text-cranberry">
+          <b>Vestuario:</b> LIBRE
+        </div>
+        <div class="text-sm text-royal-blue">
+          <b>Lugar:</b> RESTAURANTE EL MIRADOR
+        </div>
+      </div>
+    </TimeLineElement>
+    <TimeLineElement title="Checkout " subtitle="9:00am - 12:00am">
+      <div class="block">
+        <div class="text-base text-cranberry">
+          <b>Vestuario:</b> LIBRE
+        </div>
+        <div class="text-sm text-royal-blue">
+          <b>Lugar:</b> LOBBY
+        </div>
+      </div>
+    </TimeLineElement>
+  </div>
+</div>
