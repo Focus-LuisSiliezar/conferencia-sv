@@ -19,9 +19,7 @@ import { Image } from "@astrojs/image/components";
       >
     </div>
     <div class="text-sm w-full font-mono text-cranberry font-bold mb-1">
-      PROM NIGHT: <span class="text-black font-light"
-        >FIESTA DE GALA</span
-      >
+      PROM NIGHT: <span class="text-black font-light">FIESTA DE GALA</span>
     </div>
   </div>
 
@@ -39,6 +37,11 @@ import { Image } from "@astrojs/image/components";
           <div class="text-sm text-royal-blue">
             <b>Lugar:</b> Lobby
           </div>
+          <video width="320" height="240" controls>
+            <source src="/inscripciones.mp4" type="video/mp4" />
+            <source src="/inscripciones.ogg" type="video/ogg" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </TimeLineElement>
       <TimeLineElement
@@ -61,10 +64,7 @@ import { Image } from "@astrojs/image/components";
           </div>
         </div>
       </TimeLineElement>
-      <TimeLineElement
-        title="Cena de apertura"
-        subtitle="7:30pm - 8:00pm"
-      >
+      <TimeLineElement title="Cena de apertura" subtitle="7:30pm - 8:00pm">
         <div class="block">
           <div class="text-base text-cranberry">
             <b>Vestuario:</b> GODS & GODDESSES
@@ -377,31 +377,32 @@ import { Image } from "@astrojs/image/components";
       </TimeLineElement>
     </div>
   </div>
-<!-- Domingo -->
-<div id="domingo">
-  <div class="my-5">
-    <div class="text-2xl w-full font-semibold">Domingo</div>
+  <!-- Domingo -->
+  <div id="domingo">
+    <div class="my-5">
+      <div class="text-2xl w-full font-semibold">Domingo</div>
+    </div>
+    <div class="time-line-container grid gap-4 mb-10">
+      <TimeLineElement title="Desayuno" subtitle="6:00am - 9:00am">
+        <div class="block">
+          <div class="text-base text-cranberry">
+            <b>Vestuario:</b> LIBRE
+          </div>
+          <div class="text-sm text-royal-blue">
+            <b>Lugar:</b> RESTAURANTE EL MIRADOR
+          </div>
+        </div>
+      </TimeLineElement>
+      <TimeLineElement title="Checkout " subtitle="9:00am - 12:00am">
+        <div class="block">
+          <div class="text-base text-cranberry">
+            <b>Vestuario:</b> LIBRE
+          </div>
+          <div class="text-sm text-royal-blue">
+            <b>Lugar:</b> LOBBY
+          </div>
+        </div>
+      </TimeLineElement>
+    </div>
   </div>
-  <div class="time-line-container grid gap-4 mb-10">
-    <TimeLineElement title="Desayuno" subtitle="6:00am - 9:00am">
-      <div class="block">
-        <div class="text-base text-cranberry">
-          <b>Vestuario:</b> LIBRE
-        </div>
-        <div class="text-sm text-royal-blue">
-          <b>Lugar:</b> RESTAURANTE EL MIRADOR
-        </div>
-      </div>
-    </TimeLineElement>
-    <TimeLineElement title="Checkout " subtitle="9:00am - 12:00am">
-      <div class="block">
-        <div class="text-base text-cranberry">
-          <b>Vestuario:</b> LIBRE
-        </div>
-        <div class="text-sm text-royal-blue">
-          <b>Lugar:</b> LOBBY
-        </div>
-      </div>
-    </TimeLineElement>
-  </div>
-</div>
+</BaseLayout>
