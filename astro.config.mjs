@@ -16,6 +16,6 @@ export default defineConfig({
     cacheDir: "./.cache/image",
     logLevel: 'debug'
   })],
-  output: "server",
-  adapter: vercel()
+  output: "static",
+  // adapter: vercel()
 });
