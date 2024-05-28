@@ -1,10 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
-import { getApiData } from "../services/getApiData";
+// import { getApiData } from "../services/getApiData";
 import { Esenciales } from "../interfaces";
 import AlternativeLayout from "../layouts/AlternativeLayout.astro";
-const esencials = await getApiData("esencials");
+// const esencials = await getApiData("esencials");
 ---
 
 <AlternativeLayout title="Esenciales" sideBarActiveItemID="essencials">
@@ -14,43 +14,43 @@ const esencials = await getApiData("esencials");
     </div>
   </div>
   {
-    esencials
-      .filter(
-        (filteredData: Esenciales) =>
-          !filteredData?.attributes?.isGivenByUS
-      )
-      .map((esencial: Esenciales) => (
-        <>
-          <HorizontalCard
-            title={esencial?.attributes?.tituloES}
-            desc={esencial?.attributes?.descripcionES}
-            img={esencial?.attributes?.foto.data?.attributes.url}
-            isMandatory={!!esencial?.attributes?.isGivenByUS}
-          />
-          <div class="divider my-0" />
-        </>
-      ))
+    // esencials
+    //   .filter(
+    //     (filteredData: Esenciales) =>
+    //       !filteredData?.attributes?.isGivenByUS
+    //   )
+    //   .map((esencial: Esenciales) => (
+    //     <>
+    //       <HorizontalCard
+    //         title={esencial?.attributes?.tituloES}
+    //         desc={esencial?.attributes?.descripcionES}
+    //         img={esencial?.attributes?.foto.data?.attributes.url}
+    //         isMandatory={!!esencial?.attributes?.isGivenByUS}
+    //       />
+    //       <div class="divider my-0" />
+    //     </>
+    //   ))
   }
  
   <div>
   </div>
   {
-    esencials
-      .filter(
-        (filteredData: Esenciales) =>
-          !!filteredData?.attributes?.isGivenByUS 
-      )
-      .map((esencial: Esenciales) => (
-        <>
-          <HorizontalCard
-            title={esencial?.attributes?.tituloES}
-            desc={esencial?.attributes?.descripcionES}
-            img={esencial?.attributes?.foto.data?.attributes.url}
-            isMandatory={!!esencial?.attributes?.isGivenByUS}
-          />
-          <div class="divider my-0" />
-        </>
-      ))
+    // esencials
+    //   .filter(
+    //     (filteredData: Esenciales) =>
+    //       !!filteredData?.attributes?.isGivenByUS 
+    //   )
+    //   .map((esencial: Esenciales) => (
+    //     <>
+    //       <HorizontalCard
+    //         title={esencial?.attributes?.tituloES}
+    //         desc={esencial?.attributes?.descripcionES}
+    //         img={esencial?.attributes?.foto.data?.attributes.url}
+    //         isMandatory={!!esencial?.attributes?.isGivenByUS}
+    //       />
+    //       <div class="divider my-0" />
+    //     </>
+    //   ))
   }
 
 </AlternativeLayout>
